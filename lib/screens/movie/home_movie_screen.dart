@@ -15,10 +15,10 @@ class HomeMovieScreen extends StatelessWidget {
           itemCount: movieList.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(movieList[index].title),
+              title: Text(movieList[index].title, ),
               // subtitle: Text(movieList[index].year.toString(), style: TextStyle(
               subtitle: Text(
-                movieList[index].img.toString(),
+                movieList[index].year.toString(),
                 style: TextStyle(),
               ),
               leading: ClipRRect(
