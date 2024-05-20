@@ -5,7 +5,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61704,
       title: "Accident",
       description: "&#12298;&#24847;&#22806;&#12299;A self-styled accident choreographer, the Brain is a professional hitman who kills his victims by trapping them in well crafted accidents that look like unfortunate mishaps but are in fact perfectly staged acts of crime. Perennially plagued with guilt, he is also suspicious and morbid by nature. The recent avalanche of memories of his lost wife does not make things any easier.After one mission accidentally goes wrong, causing the life of one of his men, the Brain is convinced that this accident has been choreographed: someone is out there plotting to terminate him and his team. He becomes increasingly paranoid, walking on the thin line between reality and delusion.When he is accosted by a mysterious insurance agent Fong who happened to be on the scene of the accident as well, the Brain becomes obsessed that this man must be the mastermind behind a conspiracy to take him out. To regain his sanity and to safe his life, he must strive to kill Fong before he makes his next move.",
-      img: "https://yts.mx/assets/images/movies/accident_2009/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2021/11/03/08/24/baskets-6765014_1280.jpg",
       rating: 6.6,
       year: 2009,
       genres: [
@@ -18,7 +18,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61703,
       title: "Seth Rogen's Hilarity for Charity",
       description: "Seth Rogen hosts an evening of comedy to raise awareness for Alzheimer's disease.",
-      img: "https://yts.mx/assets/images/movies/seth_rogens_hilarity_for_charity_2018/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2023/02/08/18/36/tawny-owl-7777285_640.jpg",
       rating: 5,
       year: 2018,
       genres: [
@@ -30,7 +30,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61702,
       title: "Everything Puppies",
       description: "A dedicated entrepreneur and inventor looking to make it big creating innovative dog toys and treats finds success with the support of a handsome client. Starring Pascal Lamothe-Kipnes, Stephen Huszar, and Kathryn Davis.",
-      img: "https://yts.mx/assets/images/movies/everything_puppies_2024/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2020/04/20/18/10/cinema-5069314_640.jpg",
       rating: 6.1,
       year: 2024,
       genres: [
@@ -42,7 +42,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61701,
       title: "Phil Tippett: Mad Dreams and Monsters",
       description: "An in-depth, sad, and beautiful documentary about the stop motion and VFX artist Phil Tippett, a man who changed the landscape of visual effects in film.",
-      img: "https://yts.mx/assets/images/movies/phil_tippett_mad_dreams_and_monsters_2019/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2019/10/17/21/17/joker-4557864_640.jpg",
       rating: 7.2,
       year: 2019,
       genres: [
@@ -55,7 +55,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61700,
       title: "Silence of the Prey",
       description: "In a desperate bid to secure a future for her child, an undocumented immigrant mother takes a caretaker job. Unbeknownst to her, the elderly man conceals a horrifying truth.",
-      img: "https://yts.mx/assets/images/movies/silence_of_the_prey_2024/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2020/06/29/21/13/city-5354477_640.jpg",
       rating: 5.2,
       year: 2024,
       genres: [
@@ -67,7 +67,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61699,
       title: "A Letter for Wales",
       description: "Donald Houston plays a Welshman who tells the story of what it's like to live in small town Wales and how the train service helps.",
-      img: "https://yts.mx/assets/images/movies/a_letter_for_wales_1960/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2017/03/07/23/33/technology-2125547_640.jpg",
       rating: 6.2,
       year: 1960,
       genres: [
@@ -79,7 +79,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61698,
       title: "The Way Things Go",
       description: "Inside a warehouse, a precarious 70-100 feet long structure has been constructed using various items. When this is set in motion, a chain reaction ensues. Fire, water, law of gravity as well as chemistry determine the life-cycle of objects - of things. It brings about a story concerning cause and effect, mechanism and art, improbability and precision.—Anonymous",
-      img: "https://yts.mx/assets/images/movies/the_way_things_go_1987/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2018/07/06/19/48/charles-chaplin-3521070_640.jpg",
       rating: 7.6,
       year: 1987,
       genres: [
@@ -91,7 +91,7 @@ final List<MovieModel> MOVIES_CONSTANT = [
       id: 61697,
       title: "Every Valley",
       description: "A look at the transport system in the South Wales Valleys and how it effects peoples livelihoods and everyday lives.",
-      img: "https://yts.mx/assets/images/movies/every_valley_1957/medium-cover.jpg",
+      img: "https://cdn.pixabay.com/photo/2024/05/06/11/46/monster-8743173_640.jpg",
       rating: 6.8,
       year: 1957,
       genres: [
