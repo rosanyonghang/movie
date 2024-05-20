@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie/hoc/home_layout.dart';
 import 'package:movie/providers/count_provider.dart';
+import 'package:movie/providers/movie_provider.dart';
 import 'package:movie/screens/movie/categories_movie_screen.dart';
 import 'package:movie/screens/movie/home_movie_screen.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       providers: [
         // providers should be categorized well to keep track and separate
         // all the modules and their respective variables
-        ChangeNotifierProvider(create: (context)=> CountProvider())
+        ChangeNotifierProvider(create: (context)=> CountProvider()),
+        ChangeNotifierProvider(create: (context)=> MovieProvider())
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

@@ -1,6 +1,6 @@
 import '../models/movie_model.dart';
 
-final List<MovieModel> movies = [
+final List<MovieModel> MOVIES_CONSTANT = [
   MovieModel(
       id: 61704,
       title: "Accident",
@@ -232,5 +232,4 @@ final List<MovieModel> movies = [
     genres: ["Horror"],
     runtime: 95,
   ),
-
 ];
