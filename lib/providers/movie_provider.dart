@@ -15,4 +15,8 @@ class MovieProvider extends ChangeNotifier {
   List<MovieModel> get trending => _movies.sublist(0, 4);
 
   List<MovieModel> get latestMovies => _movies.sublist(_movies.length - 4);
+
+  List<MovieModel> getMoviesByCategory(String category){
+    return _movies.where((el)=> el.genres.contains(category)).toList();
+  }
 }
