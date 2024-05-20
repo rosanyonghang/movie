@@ -8,6 +8,8 @@ class CountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // we always access the variable under widget in contrast to stateful widgets
+    // where we declare the variables before widgets
     var count = Provider.of<CountProvider>(context).count;
 
     return Scaffold(
@@ -29,6 +31,8 @@ class CountScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
+          // accessing functions, make sure you set the listen parameter to false
+          // for accessing methods
           Provider.of<CountProvider>(context, listen: false).incCount();
         },
         child: Icon(Icons.add),

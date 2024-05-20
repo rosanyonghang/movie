@@ -14,8 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // we can use one provider at a time but since, there are always different modules
+    // we tend to use MultiProvider widget
     return MultiProvider(
       providers: [
+        // providers should be categorized well to keep track and separate
+        // all the modules and their respective variables
         ChangeNotifierProvider(create: (context)=> CountProvider())
       ],
       child: MaterialApp(

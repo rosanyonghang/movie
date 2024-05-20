@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+// we extend the change notifier class to access notify listeners
 class CountProvider extends ChangeNotifier{
   int _count = 0;
 
@@ -8,6 +9,8 @@ class CountProvider extends ChangeNotifier{
 
   void incCount(){
     _count = _count + 1;
+    // notify listeners is responsible for broadcasting the widgets that
+    // the variable has been changed
     notifyListeners();
   }
 

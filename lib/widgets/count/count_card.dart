@@ -15,6 +15,8 @@ class CountCard extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: (){
+              // accessing functions, make sure you set the listen parameter to false
+              // for accessing methods
               Provider.of<CountProvider>(context, listen: false).decCount();
             },
             style: ElevatedButton.styleFrom(
