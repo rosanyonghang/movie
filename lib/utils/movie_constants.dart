@@ -1,5 +1,6 @@
 import '../models/movie_model.dart';
 
+final List<String> CATEGORIES = ['Action','Drama', 'Comedy', 'Sports', 'Muscial', 'Crime', 'Horror', 'Fantasy', 'Thriller', 'Romance', 'Animation'];
 final List<MovieModel> MOVIES_CONSTANT = [
   MovieModel(
       id: 61704,

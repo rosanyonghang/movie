@@ -13,6 +13,7 @@ class HomeLayout extends StatefulWidget {
 class _HomeLayoutState extends State<HomeLayout> {
   int _selectedIndex = 0;
 
+  List<String> titles = ['Home', 'Trending', 'Categories'];
   List<Widget> screens = [
     HomeMovieScreen(),
     TrendingMovieScreen(),
@@ -23,7 +24,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(titles[_selectedIndex]),
       ),
       body: SingleChildScrollView(
         child: screens[_selectedIndex],
