@@ -25,7 +25,7 @@ class _MoviesByCategoryScreenState extends State<MoviesByCategoryScreen> {
       body: Container(
         child: movieList.length == 0 ? Center(
           child: Text('No movies available for this category'),
-        ):ListView.builder(
+        ) : ListView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemCount: movieList.length,

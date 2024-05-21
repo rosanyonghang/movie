@@ -19,6 +19,7 @@ class HomeMovieScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image.asset('assets/images/custom.png', height:200, width:double.infinity),
               TrendingMovies(),
               CategoriesList(),
               LatestMovies()
