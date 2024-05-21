@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../models/movie_model.dart';
 import '../../providers/movie_provider.dart';
+import '../../widgets/movies/movie_tile.dart';
 
 class MoviesByCategoryScreen extends StatefulWidget {
   final String category;
@@ -30,27 +31,7 @@ class _MoviesByCategoryScreenState extends State<MoviesByCategoryScreen> {
             physics: NeverScrollableScrollPhysics(),
             itemCount: movieList.length,
             itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(movieList[index].title, ),
-                // subtitle: Text(movieList[index].year.toString(), style: TextStyle(
-                subtitle: Text(
-                  movieList[index].year.toString(),
-                  style: TextStyle(),
-                ),
-                leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.network(
-                    movieList[index].img,
-                    height: 80,
-                    width: 80,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                trailing: Text(
-                  movieList[index].rating.toString(),
-                  style: TextStyle(fontSize: 24),
-                ),
-              );
+              return MovieTile(movie: movieList[index]);;
             }),
       ),
     );
