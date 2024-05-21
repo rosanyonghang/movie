@@ -1,10 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import '../models/movie_model.dart';
 import '../utils/movie_constants.dart';
+import 'package:http/http.dart' as http;
 
 class MovieProvider extends ChangeNotifier {
   List<MovieModel> _movies = MOVIES_CONSTANT;
+  // List<MovieModel> _movies = MOVIES_CONSTANT;
   List<String> _categories = CATEGORIES;
 
   List<MovieModel> get movies => _movies;
@@ -22,5 +26,19 @@ class MovieProvider extends ChangeNotifier {
 
   MovieModel getMovieById(id){
     return _movies.firstWhere((el)=> el.id == id);
+  }
+  
+  Future<void> loadMovies() async{
+    final res = await http.get(Uri.parse('https://yts.mx/api/v2/list_movies.json'));
+    print(jsonDecode(res.body)['data']['movies']);
+    List<MovieModel> tempMovies = [];
+
+    for(final movie in jsonDecode(res.body)['data']['movies']){
+      tempMovies.add(MovieModel.fromJson(movie));
+    }
+
+    _movies= tempMovies;
+    notifyListeners();
+
   }
 }

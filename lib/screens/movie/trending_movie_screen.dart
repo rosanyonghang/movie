@@ -5,7 +5,19 @@ import 'package:provider/provider.dart';
 
 import '../../models/movie_model.dart';
 
-class TrendingMovieScreen extends StatelessWidget {
+class TrendingMovieScreen extends StatefulWidget {
+  @override
+  State<TrendingMovieScreen> createState() => _TrendingMovieScreenState();
+}
+
+class _TrendingMovieScreenState extends State<TrendingMovieScreen> {
+
+  @override
+  void initState(){
+    print('prints at first');
+    Provider.of<MovieProvider>(context, listen: false).loadMovies();
+  }
+
   @override
   Widget build(BuildContext context) {
     List<MovieModel> movieList = Provider.of<MovieProvider>(context).movies;

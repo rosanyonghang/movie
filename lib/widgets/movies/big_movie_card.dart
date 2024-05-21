@@ -26,7 +26,13 @@ class BigMovieCard extends StatelessWidget {
         margin: EdgeInsets.only(right: 8),
         alignment: Alignment.bottomLeft,
         child: Container(
+          width: double.infinity,
+          color:Colors.black,
           padding: EdgeInsets.all(8),
+          child: Text(movie.title, style: TextStyle(
+            color: Colors.white
+          ),),
+
         ),
       ),
     );

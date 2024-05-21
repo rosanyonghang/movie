@@ -11,7 +11,7 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
 
   List<String> titles = ['Home', 'Trending', 'Categories'];
   List<Widget> screens = [
