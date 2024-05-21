@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie/hoc/home_layout.dart';
-import 'package:movie/providers/count_provider.dart';
-import 'package:movie/providers/movie_provider.dart';
-import 'package:movie/screens/movie/categories_list_screen.dart';
-import 'package:movie/screens/movie/categories_movie_screen.dart';
-import 'package:movie/screens/movie/home_movie_screen.dart';
-import 'package:movie/screens/movie/home_screen.dart';
-import 'package:movie/screens/movie/trending_screen.dart';
-import 'package:provider/provider.dart';
 
 import 'screens/count_screen.dart';
-import 'screens/movie/trending_movie_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
           useMaterial3: true,
+          fontFamily: 'Poppins'
         ),
         // home: HomeMovieScreen(),
         initialRoute: '/',
