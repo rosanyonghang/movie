@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:movie/models/movie_model.dart';
+import 'package:movie/providers/movie_provider.dart';
 import 'package:movie/widgets/movies/trending_movies.dart';
+import 'package:provider/provider.dart';
 
 class MovieDetails extends StatelessWidget {
-  const MovieDetails({super.key});
+  int movieId;
+  MovieDetails({required this.movieId});
 
   @override
   Widget build(BuildContext context) {
+    final movie = Provider.of<MovieProvider>(context, listen: false).getMovieById(movieId);
+
     return Scaffold(
         appBar: AppBar(
-          title: Text('Details'),
+          title: Text(movie.title),
         ),
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -20,8 +26,8 @@ class MovieDetails extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Image.asset(
-                    'assets/images/custom.png',
+                  child: Image.network(
+                    movie.img,
                     height: 300,
                     width: double.infinity,
                     fit: BoxFit.cover,
@@ -41,7 +47,7 @@ class MovieDetails extends StatelessWidget {
                           children: <InlineSpan>[
                             TextSpan(text: 'Length: '),
                             TextSpan(
-                                text: '84h',
+                                text: movie.runtime.toString(),
                                 style: TextStyle(fontWeight: FontWeight.bold))
                           ],
                         ),
@@ -54,14 +60,14 @@ class MovieDetails extends StatelessWidget {
                           children: <InlineSpan>[
                             TextSpan(text: 'Year: '),
                             TextSpan(
-                                text: '2022',
+                                text: movie.year.toString(),
                                 style: TextStyle(fontWeight: FontWeight.bold))
                           ],
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(bottom: 24),
-                        child: Text('description about the movie'),
+                        child: Text(movie.description),
                       ),
                       TrendingMovies()
                     ],

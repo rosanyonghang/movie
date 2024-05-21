@@ -11,7 +11,7 @@ class MovieTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MovieDetails()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MovieDetails(movieId: movie.id,)));
       },
       title: Text(movie.title, ),
       // subtitle: Text(movie.year.toString(), style: TextStyle(

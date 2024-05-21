@@ -19,4 +19,8 @@ class MovieProvider extends ChangeNotifier {
   List<MovieModel> getMoviesByCategory(String category){
     return _movies.where((el)=> el.genres.contains(category)).toList();
   }
+
+  MovieModel getMovieById(id){
+    return _movies.firstWhere((el)=> el.id == id);
+  }
 }
