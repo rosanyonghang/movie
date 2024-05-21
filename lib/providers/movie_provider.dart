@@ -27,18 +27,20 @@ class MovieProvider extends ChangeNotifier {
   MovieModel getMovieById(id){
     return _movies.firstWhere((el)=> el.id == id);
   }
-  
+
+  // where we declare the method to load movies
   Future<void> loadMovies() async{
     final res = await http.get(Uri.parse('https://yts.mx/api/v2/list_movies.json'));
+    // decode data before use
     print(jsonDecode(res.body)['data']['movies']);
     List<MovieModel> tempMovies = [];
 
+    // looping for it to fit in MovieModel format
     for(final movie in jsonDecode(res.body)['data']['movies']){
       tempMovies.add(MovieModel.fromJson(movie));
     }
 
     _movies= tempMovies;
     notifyListeners();
-
   }
 }

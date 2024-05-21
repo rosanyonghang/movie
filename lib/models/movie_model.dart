@@ -19,6 +19,7 @@ class MovieModel {
     required this.year,
   });
 
+  // creation of DTO inside our model
   factory MovieModel.fromJson(Map<String, dynamic> json) {
     return switch (json) {
       {
