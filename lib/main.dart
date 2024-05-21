@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:movie/hoc/home_layout.dart';
 import 'package:movie/providers/count_provider.dart';
 import 'package:movie/providers/movie_provider.dart';
+import 'package:movie/screens/movie/categories_list_screen.dart';
 import 'package:movie/screens/movie/categories_movie_screen.dart';
 import 'package:movie/screens/movie/home_movie_screen.dart';
+import 'package:movie/screens/movie/home_screen.dart';
+import 'package:movie/screens/movie/trending_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/count_screen.dart';
@@ -21,29 +24,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // we can use one provider at a time but since, there are always different modules
     // we tend to use MultiProvider widget
-    return MultiProvider(
-      providers: [
-        // providers should be categorized well to keep track and separate
-        // all the modules and their respective variables
-        ChangeNotifierProvider(create: (context)=> CountProvider()),
-        ChangeNotifierProvider(create: (context)=> MovieProvider())
-      ],
-      child: MaterialApp(
+    return  MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
           useMaterial3: true,
         ),
         // home: HomeMovieScreen(),
         initialRoute: '/',
         routes: {
-          '/': (context)=> HomeLayout(),
-          // '/trending': (context)=> TrendingMovieScreen(),
-          // '/categories': (context)=> CategoriesMovieScreen(),
+         '/': (context)=> HomeLayout(),
+         // '/category': (context)=> CategoriesListScreen(),
+         // '/trending': (context)=> TrendingScreen(),
         }
-      ),
     );
   }
 }
 
+// stacked, main
