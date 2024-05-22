@@ -29,14 +29,14 @@ class _MovieDetailsState extends State<MovieDetails> {
   Future<void> loadMovieSuggestions(String id) async {
     final res = await http.get(Uri.parse(
         'https://yts.mx/api/v2/movie_suggestions.json?movie_id=' + id));
-    print(jsonDecode(res.body)['data']['movies']);
+    // print(jsonDecode(res.body)['data']['movies']);
     List<MovieModel> tempMovies = [];
 
     for(final movie in jsonDecode(res.body)['data']['movies']){
         tempMovies.add(MovieModel.fromJson(movie));
     }
 
-    print(tempMovies);
+    // print(tempMovies);
     setState(() {
       movieSuggestions = tempMovies;
       loading = false;
